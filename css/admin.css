@@ -1,0 +1,227 @@
+@import url('universal.css');
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/*-----------------HEADER----------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-left: 50px;
+}
+.logo img {
+    height: 145px;
+}
+.logo p{
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+    padding-right: 30px;
+}
+.menu a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #333;
+    font-weight: bold;
+}
+/*-----------------HEADER----------------*/
+
+.admin-container {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+}
+
+/*-----------------Формы-----------------*/
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 200px;
+}
+
+button {
+    background: #001F58;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/*-----------------Таблица-----------------*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table a {
+    margin-right: 10px;
+    color: #2c3e50;
+}
+
+table a:hover {
+    color: #1abc9c;
+}
+
+
+/*-----------------Оповещения-----------------*/
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/*-----------------Разделы админки-----------------*/
+.admin-sections {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .admin-sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* GLOBAL RESPONSIVE FIXES */
+*{box-sizing:border-box}
+img{max-width:100%;height:auto}
+body{overflow-x:hidden}
+
+@media (max-width:1024px){
+ .items{grid-template-columns:repeat(2,1fr)!important;margin:20px!important;padding:20px!important}
+ .themes,.report{padding-left:20px!important;margin:20px!important}
+ .topic-text{font-size:20px!important}
+}
+
+@media (max-width:768px){
+ header,.logo,.menu,.us,footer,.network,.snoska{
+   flex-direction:column!important;
+   text-align:center;
+ }
+ .logo,.menu,.snoska{padding:0!important}
+ .logo img{height:90px!important}
+ .logo a,.logo p{font-size:22px!important}
+ .menu a{font-size:18px!important}
+ .about-section{flex-direction:column!important;padding:25px 10px!important}
+ .about-section a,.about-section span{font-size:28px!important;width:auto!important}
+ .us p{font-size:24px!important}
+ .items{grid-template-columns:1fr!important}
+ .item{width:100%!important;max-width:320px}
+ .themes,.report{padding:15px!important;margin:0!important}
+ .theme,.topic h1{font-size:24px!important}
+ .topic-text{font-size:18px!important}
+ table{display:block;overflow-x:auto}
+ .prev-button,.next-button{display:none!important}
+ footer{padding:20px!important}
+}
+
+@media (max-width:480px){
+ .theme a,.topic-text,.network-info a{font-size:16px!important}
+ .about-section a,.about-section span{font-size:22px!important}
+}
+
+@media (max-width: 768px) {
+    .admin-sections {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .add-article, .articles-list {
+        width: 100%;
+    }
+    
+    .articles-list {
+        overflow-x: auto;
+    }
+    
+    .articles-list table {
+        min-width: 600px;
+    }
+    
+    .articles-list table td,
+    .articles-list table th {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .articles-list table a {
+        display: inline-block;
+        margin: 3px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .alert {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
